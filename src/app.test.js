@@ -37,7 +37,7 @@ describe("/test endpoint", () => {
         const response = await request.get("/test")
 
         // Vérifie que la valeur de l'entête 'Content-Type' est égale à 'text/plain'
-        expect(response.headers["content-type"]).to.equal("text/plain")
+        expect(response.headers["content-type"]).to.equal("text/plain; charset=utf-8")
     })
 })
 
@@ -70,7 +70,7 @@ describe("/about endpoint", () => {
         const response = await request.get("/about")
 
         // Vérifie que la valeur de l'entête 'Content-Type' est égale à 'text/plain'
-        expect(response.headers["content-type"]).to.equal("text/plain")
+        expect(response.headers["content-type"]).to.equal("text/plain; charset=utf-8")
     })
 })
 
@@ -103,7 +103,7 @@ describe("/contact endpoint", () => {
         const response = await request.get("/contact")
 
         // Vérifie que la valeur de l'entête 'Content-Type' est égale à 'text/plain'
-        expect(response.headers["content-type"]).to.equal("text/plain")
+        expect(response.headers["content-type"]).to.equal("text/plain; charset=utf-8")
     })
 })
 
@@ -136,6 +136,6 @@ describe("/users endpoint", () => {
         const response = await request.get("/users/:974")
 
         // Vérifie que la valeur de l'entête 'Content-Type' est égale à 'text/plain'
-        expect(response.headers["content-type"]).to.equal("text/plain")
+        expect(response.headers["content-type"]).to.equal("text/plain; charset=utf-8")
     })
 })

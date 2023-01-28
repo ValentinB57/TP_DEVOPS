@@ -18,24 +18,28 @@ app.use(express.static('public'));
 // Ajoute une route pour la requête GET '/test'
 app.get("/test", (_req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "Hello world"
+   res.type("text/plain");
   res.status(200).send("Hello world")
 })
 
 // Ajoute une route pour la requête GET '/about'
 app.get("/about", (_req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "This is an about page"
+   res.type("text/plain");
   res.status(200).send("This is an about page")
 })
 
 // Ajoute une route pour la requête GET '/contact'
 app.get("/contact", (_req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "Contact us at"
+   res.type("text/plain");
   res.status(200).send("Contact us at contact@example.com")
 })
 
 // Ajoute une route pour la requête GET '/users/:id'
 app.get("/users/:id", (req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "Displaying information for user with ID: ${ req.params.id }"
+   res.type("text/plain");
   res.status(200).send("Displaying information for user with ID: ${ req.params.id }")
 })
 
