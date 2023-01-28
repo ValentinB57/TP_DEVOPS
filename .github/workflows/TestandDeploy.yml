@@ -18,9 +18,9 @@ jobs:
         run: npm install
       - name: Run test
         run: npm test
-      - name: Check test result
-        if: failure()
+      - if: failure()
+        name: Check test result
         run: exit 1
-      - name: Deploy
-        if: success()
+      - if: success()
+        name: Deploy
         run: git push
