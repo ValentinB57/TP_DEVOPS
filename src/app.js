@@ -18,7 +18,7 @@ app.use(express.static('public'));
 // Ajoute une route pour la requête GET '/test'
 app.get("/test", (_req, res) =>  {
   // Envoie une réponse HTTP avec un statut 200 et un message "Hello world"
-  res.status(200).send("Hello world_")
+  res.status(200).send("Hello world")
 })
 
 // Ajoute une page de base  pour les toutes les routes non définies'
