@@ -18,3 +18,16 @@ jobs:
         run: npm install
       - name: Run test
         run: npm test
+      - name: Validate tests
+        if: ${{ failure() }}
+        uses: actions/github-script@v3
+        with:
+          script: |
+            const context = github.context
+            if (context.ref === 'refs/heads/main') {
+              github.git.updateRef({
+                ...context.repo,
+                ref: context.ref,
+                sha: context.before
+              })
+            }
