@@ -3,17 +3,23 @@ on:
   push:
     branches: 
       - main
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Use Node.js
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v3
         with: 
           node-version: "14.x"
       - name: Install dependencies
         run: npm install
       - name: Run test
         run: npm test
+        id: test
+      - name: Deploy
+        if: steps.test.outputs.status == 'success'
+        run: git push
+
