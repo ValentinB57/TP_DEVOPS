@@ -10,12 +10,12 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "app" {
-  name         = "cranky_solomon"
+  name         = "node:14-alpine"
   keep_locally = false
 }
 
 resource "docker_container" "app" {
-  image = cranky_solomon
+  image = node:14-alpine
   name  = "appTest"
   ports {
     internal = 80
