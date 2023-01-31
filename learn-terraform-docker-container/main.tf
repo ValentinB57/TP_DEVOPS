@@ -37,7 +37,7 @@ resource "docker_container" "tpdevops" {
     external = "8080"
   }
 }
-/* }
+
 resource "docker_container" "tpdevops" {
   image = "tpdevops:latest"
   name  = "tpdevops"
@@ -46,4 +46,4 @@ resource "docker_container" "tpdevops" {
     internal = 80
     external = 3000
   }
-} */
+}
