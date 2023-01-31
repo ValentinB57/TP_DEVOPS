@@ -14,6 +14,9 @@ RUN npm ci
 # Copie les fichiers de l'application
 COPY src/ .
 
+# Copie les fichiers de l'application
+COPY . /myapp
+
 # Expose le port sur lequel l'application écoute
 EXPOSE 3000
 
