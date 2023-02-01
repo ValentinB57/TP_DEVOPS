@@ -20,6 +20,7 @@ app.get("/test", (_req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "Hello world"
    res.type("text/plain");
    res.status(200).send("Hello world")
+
 })
 
 // Ajoute une route pour la requête GET '/about'
@@ -53,4 +54,6 @@ app.get('/*', (req, res) => {
 // Exporte l'instance de l'application pour pouvoir l'utiliser dans d'autres fichiers
 module.exports = app;
 
-//test d'un push qui valide les tests  !!!!
+
+//test d'un push qui valide les tests
+
