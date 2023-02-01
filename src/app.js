@@ -20,6 +20,7 @@ app.get("/test", (_req, res) => {
   // Envoie une réponse HTTP avec un statut 200 et un message "Hello world"
    res.type("text/plain");
    res.status(200).send("Hello world")
+
 })
 
 // Ajoute une route pour la requête GET '/about'
